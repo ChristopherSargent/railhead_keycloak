@@ -90,7 +90,14 @@ services:
 ```
 16. podman-compose -f keycloak.yml up -d
 * podman logs -t keycloak_keycloak_1 
-17. http://10.1.2.86:8010/ select admin console 
+17. podman ps 
+```
+CONTAINER ID  IMAGE                              COMMAND     CREATED       STATUS           PORTS                   NAMES
+d66e2c48c89d  docker.io/library/postgres:latest  postgres    24 hours ago  Up 24 hours ago                          keycloak_postgres_1
+de0bbe48c12d  quay.io/keycloak/keycloak:latest   start-dev   24 hours ago  Up 23 hours ago  0.0.0.0:8010->8080/tcp  keycloak_keycloak_1
+
+```
+18. http://10.1.2.86:8010/ select admin console 
 
 ![Screenshot](resources/keycloak01.png)
 
