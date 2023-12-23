@@ -6,7 +6,7 @@ This repository contains the code and configuration instructions for MFA to Micr
 # [Download Windows Server 2022](https://go.microsoft.com/fwlink/p/?LinkID=2195167&clcid=0x409&culture=en-us&country=US)
 # [Install Windows Server 2022 Instructions](https://medium.com/@yasithkumara/creating-a-virtual-windows-server-in-windows-10-with-hyper-v-9f3bd58c0ba)
 # [Active Directory Install Instructions](https://medium.com/@yasithkumara/how-to-create-a-domain-and-a-domain-controller-in-a-windows-server-2019-virtual-machine-e70587e2fbe2)
-# [Ubbuntu 20.04 STIG Hardened FIPS Enabled](https://docs.google.com/document/d/1nEIavbELGl8xjHjZX4p22q5m32HCLkLH/edit#heading=h.gjdgxs)
+# [Ubuntu 20.04 STIG Hardened FIPS Enabled](https://docs.google.com/document/d/1nEIavbELGl8xjHjZX4p22q5m32HCLkLH/edit#heading=h.gjdgxs)
 * Take post set up snapshot on all servers 
 * Create cas.local domain 
 
