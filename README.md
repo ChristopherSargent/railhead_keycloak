@@ -97,7 +97,13 @@ d66e2c48c89d  docker.io/library/postgres:latest  postgres    24 hours ago  Up 24
 de0bbe48c12d  quay.io/keycloak/keycloak:latest   start-dev   24 hours ago  Up 23 hours ago  0.0.0.0:8010->8080/tcp  keycloak_keycloak_1
 
 ```
-18. http://10.1.2.86:8010/ select admin console 
+18. podman stats
+```
+ID            NAME                 CPU %       MEM USAGE / LIMIT  MEM %       NET IO             BLOCK IO      PIDS        CPU TIME         AVG CPU %
+d66e2c48c89d  keycloak_postgres_1  0.01%       74.49MB / 8.331GB  0.89%       2.642kB / 15.75kB  0B / 68.83MB  6           42.379118819s    0.00%
+de0bbe48c12d  keycloak_keycloak_1  0.50%       544.4MB / 8.331GB  6.53%       205.3MB / 2.498MB  0B / 27.14MB  53          9m28.123792396s  0.39%
+```
+19. http://10.1.2.86:8010/ select admin console 
 
 ![Screenshot](resources/keycloak01.png)
 
