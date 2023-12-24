@@ -131,7 +131,7 @@ de0bbe48c12d  keycloak_keycloak_1  0.50%       544.4MB / 8.331GB  6.53%       20
 
 ![Screenshot](resources/keycloak05.png)
 
-3. Populate the following fields.
+3. Populate Connection and authentication fields.
 * UI display name = ldap
 * Vender = Active Directory
 * Connection URL = ldap://adserverip
@@ -140,8 +140,23 @@ de0bbe48c12d  keycloak_keycloak_1  0.50%       544.4MB / 8.331GB  6.53%       20
 * Bind DN = CN=Administrator,CN=Users,DC=cas,DC=local
 * Bind credentials = AD administrator account or specific LDAP account for AD
 * Test connection and Test authentication 
+* Save
 
 ![Screenshot](resources/keycloak06.png)
+
+4. Populate LDAP searching and updating fields.
+* Edit mode = READ_ONLY or WRITABLE 
+* Users DN = CN=Users,DC=cas,DC=local
+* Username LDAP attribute = cn
+* RDN LDAP attribute = cn
+* UUID LDAP attribute = objectGUID
+* User object classes = person, organizationalPerson, user
+* Search scope = One Level
+* Import uses = toggle on
+* Sync Registrations = toggle on
+* Save
+
+![Screenshot](resources/keycloak07.png)
 
 # Notes
 ```
