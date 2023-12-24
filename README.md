@@ -109,6 +109,40 @@ de0bbe48c12d  keycloak_keycloak_1  0.50%       544.4MB / 8.331GB  6.53%       20
 
 ![Screenshot](resources/keycloak02.png)
 
+# Create new Keycloak realm
+1. http://10.1.2.86:8010/admin/master/console/
+
+![Screenshot](resources/keycloak02.png)
+
+2. Select the master realm box and then select Create realm.
+
+![Screenshot](resources/keycloak03.png)
+
+3. Fill out Realm name and toggle to Enabled and then select Create.
+
+![Screenshot](resources/keycloak04.png)
+
+# Configure AD for user Federation via Keycloak
+1. http://10.1.2.86:8010/admin/master/console/
+
+![Screenshot](resources/keycloak02.png)
+
+2. Select User federation and then select Add new provider and select LDAP.
+
+![Screenshot](resources/keycloak05.png)
+
+3. Populate the following fields.
+* UI display name = ldap
+* Vender = Active Directory
+* Connection URL = ldap://adserverip
+* User Truststore SPI = Always
+* Bind type = simple
+* Bind DN = CN=Administrator,CN=Users,DC=cas,DC=local
+* Bind credentials = AD administrator account or specific LDAP account for AD
+* Test connection and Test authentication 
+
+![Screenshot](resources/keycloak06.png)
+
 # Notes
 ```
 podman exec -it keycloak_keycloak_1 bash
